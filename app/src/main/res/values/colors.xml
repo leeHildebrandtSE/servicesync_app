@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Primary Colors -->
+    <color name="primary_color">#F97316</color>
+    <color name="primary_dark">#EA580C</color>
+    <color name="secondary_color">#F8FAFC</color>
+
+    <!-- Background Colors -->
+    <color name="background_color">#FFFFFF</color>
+    <color name="input_background">#FAFAFA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+
+    <!-- Border Colors -->
+    <color name="border_color">#E5E7EB</color>
+
+    <!-- Status Colors - Success (Green) -->
+    <color name="success_light">#F0FDF4</color>
+    <color name="success_dark">#10B981</color>
+
+    <!-- Status Colors - Warning (Orange) -->
+    <color name="warning_light">#FFF7ED</color>
+    <color name="warning_dark">#F97316</color>
+
+    <!-- Status Colors - Error (Red) -->
+    <color name="error_light">#FFEBEE</color>
+    <color name="error_dark">#C62828</color>
+
+    <!-- Status Colors - Info (Blue) -->
+    <color name="info_light">#EFF6FF</color>
+    <color name="info_dark">#3B82F6</color>
+
+    <!-- Status Colors - Progress (Purple) -->
+    <color name="progress_light">#F3E5F5</color>
+    <color name="progress_dark">#7B1FA2</color>
+
+    <!-- Feature-Specific Colors -->
+    <color name="timer_background">#374151</color>
+    <color name="count_background">#EFF6FF</color>
+    <color name="count_text">#3B82F6</color>
+    <color name="qr_scanner_background">#FFF7ED</color>
+    <color name="camera_background">#374151</color>
+    <color name="alert_background">#FFF7ED</color>
+    <color name="alert_text">#F97316</color>
+    <color name="buzzer_background">#374151</color>
+    <color name="terminal_green">#00FF00</color>
+
+</resources>

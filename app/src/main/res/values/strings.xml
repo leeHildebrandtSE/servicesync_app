@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">ServiceSync</string>
+    <string name="app_subtitle">Hospital Meal Service Tracking</string>
+
+    <!-- Common -->
+    <string name="na">N/A</string>
+    <string name="empty_string" />
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="snack">Snack</string>
+    <string name="calculating">Calculating…</string>
+    <string name="no_session_data">No session data available</string>
+
+    <!-- Login Activity -->
+    <string name="ward_assignments_ready">%1$s\nWard assignments ready for today</string>
+
+    <!-- Kitchen Exit Activity -->
+    <string name="invalid_kitchen_qr">Invalid Kitchen QR Code</string>
+    <string name="kitchen_exit_qr_scanned_success">Kitchen Exit QR scanned successfully!</string>
+    <string name="kitchen_exit_success">Kitchen Exit confirmed successfully</string>
+    <string name="scan_kitchen_exit_qr">📱 Scan Kitchen Exit QR</string>
+
+    <!-- Ward Arrival Activity -->
+    <string name="invalid_ward_qr">Invalid Ward QR Code</string>
+    <string name="ward_arrival_success">Ward arrival confirmed successfully</string>
+    <string name="ward_qr_scanned_success">Ward QR Code scanned successfully</string>
+
+    <!-- QR Scanner Fragment -->
+    <string name="position_qr_frame">Position QR code within frame</string>
+    <string name="final_qr_start_serving">Final QR code to start serving</string>
+    <string name="success_qr_scanned">✅ QR Code scanned successfully!</string>
+    <string name="scan_nurse_station_qr">📱 Scan Nurse Station QR</string>
+
+    <!-- Nurse Alert Activity -->
+    <string name="default_hostess_name">S. Johnson</string>
+    <string name="default_nurse_name">Mary Williams</string>
+    <string name="mary_williams">Mary Williams</string>
+    <string name="diet_nurse_buzzer_activated">Ward %1$s • %2$d %3$s Meals</string>
+    <string name="buzzer_screen_content">⚠️ MEAL ALERT ⚠️\n\nWARD: %1$s\nMEAL: %2$s\nCOUNT: %3$d MEALS\nHOSTESS: %4$s\nTIME: %5$s\n\nENTER NURSE NAME: %6$s</string>
+    <string name="nurse_response_full">Diet Nurse: %1$s\nResponse time: %2$s • Ready for verification</string>
+    <string name="response_time_1m25s">1m 25s</string>
+    <string name="proceed_nurse_station">▶️ Proceed to Nurse Station</string>
+    <string name="waiting_nurse_response">⏳ Waiting for Nurse Response</string>
+
+    <!-- Nurse Station Activity -->
+    <string name="nurse_station_info">Diet Nurse: %2$s\n%3$d %4$s meals verified and ready</string>
+    <string name="invalid_nurse_station_qr">Invalid Nurse Station QR Code</string>
+    <string name="scan_nurse_station_first">Please scan Nurse Station QR code first</string>
+    <string name="patient_list_coming_soon">Patient list feature coming soon</string>
+    <string name="nurse_station_qr_success">Nurse Station QR Code scanned successfully</string>
+    <string name="start_serving">▶️ Start Serving Patients</string>
+    <string name="nurse_station_qr_scanned">📱 Nurse Station QR Scanned</string>
+    <string name="service_summary_content">Kitchen Exit: %1$s\nWard Arrival: %2$s (%3$s)\nNurse Alert: %4$s\nNurse Response: %5$s\nReady to serve: %6$d meals</string>
+
+    <!-- Serving Progress Activity -->
+    <string name="progress_text">%1$d / %2$d</string>
+    <string name="complete_service">✅ Complete Service</string>
+    <string name="current_rate_format">%.1f meals/minute</string>
+    <string name="session_summary_progress">Kitchen Exit: %1$s\nWard Arrival: %2$s (%3$s)\nNurse Response: %4$s\nService Started: %5$s\nCurrent Rate: %6$s</string>
+    <string name="resume_timer">▶️ Resume Timer</string>
+    <string name="issue_reporting_coming_soon">Issue reporting feature coming soon</string>
+
+    <!-- Service Complete Activity -->
+    <string name="service_completed_successfully">All %1$d %2$s meals served\n%.1f%% completion rate achieved</string>
+    <string name="efficiency_above_average">Above ward average</string>
+    <string name="efficiency_below_average">Below ward average</string>
+    <string name="performance_report_complete">Kitchen Exit: %1$s\nWard Arrival: %2$s (%3$s)\nNurse Alert: %4$s\nNurse Response: %5$s (%6$s)\nService Start: %7$s\nService Complete: %8$s\n\nTotal Duration: %9$s\nMeals Served: %10$d %11$s meals\nAverage Rate: %12$.2f meals/minute\nEfficiency: %13$s</string>
+    <string name="full_report_coming_soon">Full report feature coming soon</string>
+
+    <!-- Dashboard Activity -->
+    <string name="desc_logo">ServiceSync Logo</string>
+    <string name="meal_delivery_status">Meal Delivery Status</string>
+    <string name="settings_description">Settings</string>
+    <string name="refresh_status">Refresh Status</string>
+    <string name="sync_now">Sync Now</string>
+    <string name="initializing">Initializing…</string>
+
+    <!-- Status Card Fragment -->
+    <string name="status_icon_description">Status Icon</string>
+    <string name="status_title">Status Title</string>
+    <string name="status_message">Status Message</string>
+    <string name="just_now">Just now</string>
+
+    <!-- QR Scanner Instructions -->
+    <string name="qr_scanner_instructions">• Hold your device steady\n• Ensure good lighting\n• Position QR code within the frame\n• Wait for automatic detection</string>
+
+    <!-- QR Scanner Icons -->
+    <string name="qr_scanner_icon">📱</string>
+
+    <!-- Optional: Other commonly used icons in your app -->
+    <string name="kitchen_icon">🚛</string>
+    <string name="ward_icon">🏥</string>
+    <string name="success_icon">✅</string>
+    <string name="alert_icon">🚨</string>
+    <string name="camera_icon">📷</string>
+    <string name="progress_icon">🔄</string>
+    <string name="complete_icon">🎉</string>
+    <string name="timer_icon">⏱️</string>
+    <string name="battery_icon">🔋</string>
+
+    <!-- Other commonly used strings you should also add -->
+    <string name="qr_scanner_title">QR Scanner</string>
+    <string name="qr_scanner_status">Position QR code within frame</string>
+    <string name="scan_qr_code">📱 Scan QR Code</string>
+    <string name="instructions_title">📋 Instructions</string>
+
+    <!-- Time/Status Display -->
+    <string name="time_format_8_19_am">8:19 AM</string>
+    <string name="time_format_8_15_am">8:15 AM</string>
+    <string name="time_format_8_20_am">8:20 AM</string>
+    <string name="time_format_8_22_am">8:22 AM</string>
+    <string name="time_format_8_35_am">8:35 AM</string>
+    <string name="battery_90">🔋 90%</string>
+    <string name="battery_92">🔋 92%</string>
+    <string name="battery_89">🔋 89%</string>
+    <string name="battery_88">🔋 88%</string>
+    <string name="battery_85">🔋 85%</string>
+    <string name="battery_95">🔋 95%</string>
+
+    <!-- Step indicators -->
+    <string name="step_1_of_3">Step 1 of 3: Scan Kitchen QR Code</string>
+    <string name="step_2_of_3">Step 2 of 3: Ward 3A - General Medicine</string>
+    <string name="step_3_of_3">Step 3 of 3: Begin Serving Process</string>
+
+    <!-- Common action buttons -->
+    <string name="confirm_kitchen_exit">✅ Confirm Kitchen Exit</string>
+    <string name="manual_entry">📝 Manual Entry</string>
+    <string name="confirm_alert_nurse">🔔 Confirm &amp; Alert Nurse</string>
+    <string name="start_serving_patients">▶️ Start Serving Patients</string>
+    <string name="view_patient_list">📋 View Patient List</string>
+    <string name="pause_timer">⏸️ Pause Timer</string>
+    <string name="report_issue">⚠️ Report Issue</string>
+    <string name="resend_alert">🔄 Resend Alert</string>
+    <string name="start_next_delivery">🔄 Start Next Delivery</string>
+    <string name="view_full_report">📊 View Full Report</string>
+    <string name="return_to_kitchen">🏠 Return to Kitchen</string>
+
+    <!-- Common labels -->
+    <string name="number_of_meals">📊 Number of Meals to Serve:</string>
+    <string name="trip_duration">Trip Duration</string>
+    <string name="serving_time">Serving Time</string>
+    <string name="total_elapsed_time">Total Elapsed Time</string>
+    <string name="total_service_duration">Total Service Duration</string>
+    <string name="nurse_response_time">Nurse Response Time</string>
+
+    <!-- Default values -->
+    <string name="default_meal_count">12</string>
+    <string name="minus_symbol">−</string>
+    <string name="plus_symbol">+</string>
+    <string name="total_meals_ward">Total meals for this ward</string>
+
+    <!-- Timer formats -->
+    <string name="timer_format_00_03_22">00:03:22</string>
+    <string name="timer_format_00_13_22">00:13:22</string>
+    <string name="timer_format_00_06_47">00:06:47</string>
+    <string name="timer_format_00_01_25">00:01:25</string>
+    <string name="timer_format_00_19_23">00:19:23</string>
+
+</resources>
