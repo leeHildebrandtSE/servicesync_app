@@ -3,25 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wpc.servicesync">
 
-    <!-- Camera permission for QR code scanning -->
+    <!-- Camera permission for QR code scanning and photo capture -->
     <uses-permission android:name="android.permission.CAMERA" />
 
     <!-- Network permissions for potential future features -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- Modern storage permissions for Android 13+ (API 33+) -->
-    <!-- Only add these if you actually need to read media files -->
-    <!-- <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /> -->
-    <!-- <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" /> -->
-    <!-- <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" /> -->
-
-    <!-- Legacy storage permissions for older Android versions -->
-    <!-- Only include if you support Android 12 and below AND need storage access -->
-    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-         android:maxSdkVersion="32" /> -->
-    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-         android:maxSdkVersion="32" /> -->
 
     <!-- Hardware features -->
     <uses-feature
@@ -59,6 +46,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".activities.DietSheetActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".activities.NurseAlertActivity"
             android:exported="false" />
 
@@ -73,6 +64,17 @@
         <activity
             android:name=".activities.ServiceCompleteActivity"
             android:exported="false" />
+
+        <!-- FileProvider for camera photo capture -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!-- QR Code Scanner Activity -->
         <activity

@@ -162,8 +162,8 @@ class WardArrivalActivity : AppCompatActivity() {
             putString(Constants.SESSION_DATA, Gson().toJson(session))
         }
 
-        // Navigate to Nurse Alert
-        val intent = Intent(this, NurseAlertActivity::class.java)
+        // Navigate to Diet Sheet Activity instead of directly to Nurse Alert
+        val intent = Intent(this, DietSheetActivity::class.java)
         startActivity(intent)
     }
 

@@ -23,6 +23,7 @@ data class ServiceSession(
     // Service Timestamps
     val kitchenExitTime: Date? = null,
     val wardArrivalTime: Date? = null,
+    val dietSheetCaptureTime: Date? = null,
     val nurseAlertTime: Date? = null,
     val nurseResponseTime: Date? = null,
     val serviceStartTime: Date? = null,
@@ -33,6 +34,11 @@ data class ServiceSession(
     val sessionStartTime: Date = Date(),
     val comments: String = "",
     val nurseName: String = "",
+
+    // Diet Sheet Documentation
+    val dietSheetPhotoPath: String? = null,
+    val dietSheetNotes: String = "",
+    val dietSheetDocumented: Boolean = false,
 
     // Service Status
     val isActive: Boolean = true,
@@ -163,6 +169,10 @@ data class ServiceSession(
             warnings.add("Completion rate below 75%")
         }
 
+        if (!dietSheetDocumented) {
+            warnings.add("Diet sheet not documented")
+        }
+
         return warnings
     }
 
@@ -172,8 +182,32 @@ data class ServiceSession(
     fun getSummary(): String {
         val duration = com.wpc.servicesync.utils.TimerUtils.formatTime(getElapsedTime())
         val completionRate = String.format(java.util.Locale.getDefault(), "%.1f", getCompletionRate())
+        val docStatus = if (dietSheetDocumented) "✓" else "✗"
 
         return "Ward $wardNumber • $mealsServed/$mealCount ${mealType.displayName} meals • " +
-                "$completionRate% complete • Duration: $duration"
+                "$completionRate% complete • Duration: $duration • Doc: $docStatus"
+    }
+
+    /**
+     * Check if all required documentation is complete
+     */
+    fun isDocumentationComplete(): Boolean {
+        return dietSheetDocumented || dietSheetPhotoPath != null
+    }
+
+    /**
+     * Get current workflow step
+     */
+    fun getCurrentStep(): String {
+        return when {
+            kitchenExitTime == null -> "Kitchen Exit"
+            wardArrivalTime == null -> "Ward Arrival"
+            !isDocumentationComplete() -> "Diet Sheet Documentation"
+            nurseAlertTime == null -> "Nurse Alert"
+            nurseResponseTime == null -> "Awaiting Nurse Response"
+            serviceStartTime == null -> "Nurse Station"
+            !isCompleted -> "Service in Progress"
+            else -> "Service Complete"
+        }
     }
 }

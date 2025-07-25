@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛠️ ServiceSync Debug Panel"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Session Information -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/info_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Current Session Info"
+                    android:textColor="@color/info_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/sessionInfoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading session info..."
+                    android:textColor="@color/info_dark"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Data Management -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Management"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/generateTestDataButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Generate Test Data"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/clearDataButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Clear All Data"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/button_secondary"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Navigation -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Navigation"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/gotoKitchenExitButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="1. Kitchen Exit"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/gotoWardArrivalButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="2. Ward Arrival"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/gotoDietSheetButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="3. Diet Sheet"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/gotoNurseAlertButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="4. Nurse Alert"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/gotoServingButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="5. Serving Progress"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/simulateCompleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="6. Service Complete"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary" />
+        </LinearLayout>
+
+        <!-- QR Codes -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="QR Test Codes"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/showQRCodesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Refresh"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/button_secondary"
+                android:minHeight="0dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/warning_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📱 QR Test Codes"
+                    android:textColor="@color/warning_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/qrCodesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading QR codes..."
+                    android:textColor="@color/warning_dark"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="2dp"
+                    android:maxLines="20"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Warning -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/error_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️ Development Only"
+                    android:textColor="@color/error_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This debug panel is only available in development builds. It will not appear in production versions of the app."
+                    android:textColor="@color/error_dark"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
